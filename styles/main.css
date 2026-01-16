@@ -166,7 +166,8 @@ h3 { font-size: 1.5rem; }
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 50vh;
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,12 +213,12 @@ h3 { font-size: 1.5rem; }
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .hero-greeting {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 0.5rem;
     font-weight: 400;
@@ -226,18 +227,18 @@ h3 { font-size: 1.5rem; }
 }
 
 .hero-title {
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.1;
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     line-height: 1.6;
     font-weight: 400;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -571,8 +572,8 @@ h3 { font-size: 1.5rem; }
     }
 
     .hero {
-        height: 80vh;
-        min-height: 600px;
+        height: 60vh;
+        min-height: 400px;
     }
 
     .hero-content {
@@ -581,11 +582,11 @@ h3 { font-size: 1.5rem; }
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .hero-buttons {
@@ -618,7 +619,7 @@ h3 { font-size: 1.5rem; }
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-greeting {
@@ -626,7 +627,12 @@ h3 { font-size: 1.5rem; }
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        height: 50vh;
+        min-height: 350px;
     }
 
     .blog-content {
