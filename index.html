@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -32,67 +32,146 @@
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Welcome to Hedoniz</h1>
-                <p class="hero-subtitle">Discover the art of living well through culture, lifestyle, and meaningful experiences</p>
-                <a href="#blog" class="cta-button">Explore Our Stories</a>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-greeting">Welcome to</p>
+                        <h1 class="hero-title">Hedoniz</h1>
+                        <p class="hero-subtitle">Discover the art of living well through culture, lifestyle, and meaningful experiences. Join us on a journey of exploration and inspiration.</p>
+                        <div class="hero-buttons">
+                            <a href="#blog" class="btn btn-primary">Explore Stories</a>
+                            <a href="#about" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&h=600&fit=crop&crop=face" alt="Hedoniz Lifestyle" class="profile-image">
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="about" class="about">
             <div class="container">
-                <h2>About Hedoniz</h2>
-                <p>Hedoniz is a modern lifestyle blog dedicated to exploring the finer aspects of contemporary living. From culture and arts to travel and personal growth, we curate content that inspires and enriches your daily experience.</p>
+                <div class="section-header">
+                    <h2>About Hedoniz</h2>
+                    <p class="section-subtitle">Curating experiences that enrich modern living</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hedoniz is a modern lifestyle blog dedicated to exploring the finer aspects of contemporary living. We believe that life's greatest pleasures come from mindful experiences, cultural exploration, and meaningful connections.</p>
+                        <p>From curated travel destinations and culinary adventures to arts, design, and personal growth insights, we share stories that inspire and elevate your everyday moments.</p>
+                        <div class="stats">
+                            <div class="stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Stories Published</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">10k+</span>
+                                <span class="stat-label">Monthly Readers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">25+</span>
+                                <span class="stat-label">Countries Featured</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="blog" class="blog">
             <div class="container">
-                <h2>Latest Posts</h2>
+                <div class="section-header">
+                    <h2>Latest Stories</h2>
+                    <p class="section-subtitle">Curated content for the modern lifestyle enthusiast</p>
+                </div>
                 <div class="blog-grid">
                     <article class="blog-card">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop" alt="Blog post image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=280&fit=crop" alt="Mindful Living">
                         </div>
                         <div class="blog-content">
+                            <span class="blog-category">Lifestyle</span>
                             <h3>The Art of Mindful Living</h3>
-                            <p>Discover how to incorporate mindfulness into your daily routine for a more fulfilling life.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <p>Discover how to incorporate mindfulness into your daily routine for a more fulfilling and present life experience.</p>
+                            <div class="blog-meta">
+                                <span class="blog-date">Jan 15, 2026</span>
+                                <span class="blog-read-time">5 min read</span>
+                            </div>
                         </div>
                     </article>
                     
                     <article class="blog-card">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=400&h=250&fit=crop" alt="Blog post image">
+                            <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=400&h=280&fit=crop" alt="Interior Design">
                         </div>
                         <div class="blog-content">
+                            <span class="blog-category">Design</span>
                             <h3>Modern Interior Design Trends</h3>
-                            <p>Explore the latest trends in interior design that are shaping modern homes.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <p>Explore the latest trends in interior design that are shaping contemporary homes and living spaces.</p>
+                            <div class="blog-meta">
+                                <span class="blog-date">Jan 12, 2026</span>
+                                <span class="blog-read-time">7 min read</span>
+                            </div>
                         </div>
                     </article>
                     
                     <article class="blog-card">
                         <div class="blog-image">
-                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=250&fit=crop" alt="Blog post image">
+                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=280&fit=crop" alt="Culinary Journey">
                         </div>
                         <div class="blog-content">
+                            <span class="blog-category">Culture</span>
                             <h3>Culinary Adventures</h3>
-                            <p>A journey through global cuisines and the stories behind exceptional dishes.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <p>A journey through global cuisines and the fascinating stories behind exceptional dishes and culinary traditions.</p>
+                            <div class="blog-meta">
+                                <span class="blog-date">Jan 10, 2026</span>
+                                <span class="blog-read-time">6 min read</span>
+                            </div>
                         </div>
                     </article>
+                </div>
+                <div class="blog-cta">
+                    <a href="#" class="btn btn-outline">View All Stories</a>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="contact">
             <div class="container">
-                <h2>Get In Touch</h2>
-                <p>Have a story to share or want to collaborate? We'd love to hear from you.</p>
-                <div class="contact-info">
-                    <p>Email: hello@hedoniz.com</p>
-                    <p>Follow us on social media for daily inspiration</p>
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <h2>Let's Connect</h2>
+                        <p>Have a story to share, collaboration in mind, or just want to say hello? We'd love to hear from you and explore how we can create something beautiful together.</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:hello@hedoniz.com" class="contact-link">hello@hedoniz.com</a>
+                            </div>
+                            <div class="contact-method">
+                                <span class="contact-label">Follow</span>
+                                <div class="social-links">
+                                    <a href="#" class="social-link">Instagram</a>
+                                    <a href="#" class="social-link">Twitter</a>
+                                    <a href="#" class="social-link">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form class="form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Your Message" rows="5" class="form-textarea"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
