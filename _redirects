@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects for clean URLs
+/canadian-rockies  /canadian-rockies.html   200
+/thanks            /thanks.html             200
