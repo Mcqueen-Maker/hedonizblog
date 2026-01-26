@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    
+
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
@@ -20,18 +20,21 @@ document.addEventListener('DOMContentLoaded', function() {
 // Smooth Scrolling for Navigation Links
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('a[href^="#"]');
-    
+
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
-            
+
             if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
@@ -42,13 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
+        header.style.background = 'rgba(250, 249, 246, 0.98)';
     } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-    }
-});
-
-// Animate elements on scroll
+        header.style.background = 'rgba(250, 249, 246, 0.95)';
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'

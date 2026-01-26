@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hedoniz - Travel, Food & Life Adventures</title>
     <meta name="description" content="Join a DevOps engineer's journey through travel adventures, culinary discoveries, gardening projects, and the art of balancing a busy tech life with meaningful experiences.">
+    <link rel="alternate" type="application/rss+xml" title="Hedoniz RSS" href="rss.xml">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -19,6 +20,7 @@
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#comments" class="nav-link">Comments</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="hamburger">
@@ -40,7 +42,6 @@
                 <div class="hero-content">
                     <p class="hero-greeting">Welcome to</p>
                     <h1 class="hero-title">Hedoniz</h1>
-                    <p class="hero-subtitle">Adventures in travel, food discoveries, garden experiments, and finding balance as a DevOps engineer living life to the fullest.</p>
                     <div class="hero-buttons">
                         <a href="#blog" class="btn btn-primary">Explore My Adventures</a>
                         <a href="#about" class="btn btn-secondary">About My Journey</a>
@@ -57,7 +58,7 @@
                 </div>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Hi, I'm a DevOps engineer who believes that the best stories happen outside the terminal. When I'm not orchestrating deployments or optimizing infrastructure, you'll find me exploring new destinations, experimenting with recipes, or getting my hands dirty in the garden.</p>
+                        <p>Hi, I'm someone with a 9 to 5 career who believes that the best stories happen outside the office. When I'm not at my desk or in meetings, you'll find me exploring new destinations, experimenting with recipes, or getting my hands dirty in the garden.</p>
                         <p>Hedoniz is where I share the adventures that keep me grounded and inspired—from hidden local gems and street food discoveries to weekend gardening projects and travel tales that remind me why work-life balance isn't just a buzzword.</p>
                         <div class="stats">
                             <div class="stat">
@@ -92,14 +93,14 @@
                         <div class="blog-content">
                             <span class="blog-category">Travel</span>
                             <h3>Weekend Escapes: Finding Hidden Gems</h3>
-                            <p>How a busy DevOps schedule taught me to make the most of short getaways and discover incredible places just hours away.</p>
+                            <p>How a busy 9 to 5 schedule taught me to make the most of short getaways and discover incredible places just hours away.</p>
                             <div class="blog-meta">
                                 <span class="blog-date">Jan 15, 2026</span>
                                 <span class="blog-read-time">5 min read</span>
                             </div>
                         </div>
                     </article>
-                    
+
                     <article class="blog-card">
                         <div class="blog-image">
                             <img src="images/food-1.jpg" alt="Cooking Adventure">
@@ -114,7 +115,7 @@
                             </div>
                         </div>
                     </article>
-                    
+
                     <article class="blog-card">
                         <div class="blog-image">
                             <img src="images/garden-1.jpg" alt="Garden Project">
@@ -122,7 +123,7 @@
                         <div class="blog-content">
                             <span class="blog-category">Gardening</span>
                             <h3>From Code to Compost: My Garden Journey</h3>
-                            <p>Why getting my hands dirty with soil became the perfect antidote to long days of managing cloud infrastructure.</p>
+                            <p>Why getting my hands dirty with soil became the perfect antidote to long days at the office.</p>
                             <div class="blog-meta">
                                 <span class="blog-date">Jan 10, 2026</span>
                                 <span class="blog-read-time">6 min read</span>
@@ -132,6 +133,57 @@
                 </div>
                 <div class="blog-cta">
                     <a href="#" class="btn btn-outline">View All Stories</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Stay Updated</h2>
+                <p>Get notified about new adventures and stories.</p>
+                <div class="newsletter-content">
+                    <div class="newsletter-form">
+                        <script async data-uid="af1be1ec49" src="https://hedoniz.kit.com/af1be1ec49/index.js"></script>
+                    </div>
+                    <div class="rss-subscribe">
+                        <a href="https://rss.app/feeds/Wf9KAZNuqSI7CnCI.xml" class="rss-button" target="_blank">Subscribe via RSS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comments Section -->
+        <section id="comments" class="comments">
+            <div class="container">
+                <div class="comments-container">
+                    <h2>Join the Conversation</h2>
+                    <p>Share your thoughts, experiences, or questions below!</p>
+                    
+                    <!-- Staticman Comment Form -->
+                    <div class="comment-form-container">
+                        <form class="comment-form" method="POST" action="https://api.staticman.net/v3/entry/github/MMalik/hedonizblog/master/comments">
+                            <input name="options[redirect]" type="hidden" value="https://yourdomain.com/thanks.html">
+                            <input name="options[slug]" type="hidden" value="homepage">
+                            
+                            <div class="form-group">
+                                <input type="text" name="fields[name]" placeholder="Your Name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="fields[email]" placeholder="Your Email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="fields[message]" placeholder="Your Comment" rows="5" class="form-textarea" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Post Comment</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Comments Display (would be generated by Staticman) -->
+                    <div class="comments-list">
+                        <!-- Comments will be displayed here after Staticman processes them -->
+                        <p class="no-comments">No comments yet. Be the first to share your thoughts!</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -178,7 +230,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Hedoniz. All rights reserved.</p>
+            <p>&copy; 2026 Hedoniz. All rights reserved.</p>
         </div>
     </footer>
 

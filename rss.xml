@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <title>Hedoniz - Travel, Food & Life Adventures</title>
+    <description>Join a DevOps engineer's journey through travel adventures, culinary discoveries, gardening projects, and the art of balancing a busy tech life with meaningful experiences.</description>
+    <link>https://mmalik.github.io/hedonizblog/</link>
+    <atom:link href="https://mmalik.github.io/hedonizblog/rss.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Jan 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+        <title>Weekend Escapes: Finding Hidden Gems</title>
+        <description>How a busy 9 to 5 schedule taught me to make the most of short getaways and discover incredible places just hours away.</description>
+        <link>https://mmalik.github.io/hedonizblog/#blog</link>
+        <guid>https://mmalik.github.io/hedonizblog/#blog</guid>
+        <pubDate>Fri, 15 Jan 2026 12:00:00 GMT</pubDate>
+        <category>Travel</category>
+    </item>
+    <item>
+        <title>Late-Night Cooking Experiments</title>
+        <description>What happens when you combine deployment stress with culinary creativity? Some of my best recipes, apparently.</description>
+        <link>https://mmalik.github.io/hedonizblog/#blog</link>
+        <guid>https://mmalik.github.io/hedonizblog/#blog</guid>
+        <pubDate>Tue, 12 Jan 2026 12:00:00 GMT</pubDate>
+        <category>Food</category>
+    </item>
+    <item>
+        <title>From Code to Compost: My Garden Journey</title>
+        <description>Why getting my hands dirty with soil became the perfect antidote to long days at the office.</description>
+        <link>https://mmalik.github.io/hedonizblog/#blog</link>
+        <guid>https://mmalik.github.io/hedonizblog/#blog</guid>
+        <pubDate>Sun, 10 Jan 2026 12:00:00 GMT</pubDate>
+        <category>Gardening</category>
+    </item>
+</channel>
+</rss>
