@@ -457,20 +457,74 @@ h3 { font-size: 1.5rem; }
 .newsletter-content {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    max-width: 600px;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 800px;
     margin: 0 auto;
     flex-wrap: wrap;
 }
 
-.newsletter-form {
+.notify-form,
+.rss-subscribe {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.notify-form h3,
+.rss-subscribe h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.email-notify-form {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.notify-input {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.notify-input:focus {
+    outline: none;
+    border-color: #6B8E23;
+}
+
+.email-notify-form .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.notify-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.notify-message.success {
+    color: #28a745;
+}
+
+.notify-message.error {
+    color: #dc3545;
 }
 
 .rss-subscribe {
-    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .rss-button {
@@ -482,11 +536,24 @@ h3 { font-size: 1.5rem; }
     border-radius: 8px;
     font-weight: 500;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .rss-button:hover {
     background: #555;
     transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .newsletter-content {
+        gap: 1.5rem;
+    }
+    
+    .notify-form,
+    .rss-subscribe {
+        min-width: 100%;
+        padding: 1.5rem;
+    }
 }
 
 /* Blog Post Styles */

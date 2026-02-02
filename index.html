@@ -143,10 +143,16 @@
                 <h2>Stay Updated</h2>
                 <p>Get notified about new adventures and stories.</p>
                 <div class="newsletter-content">
-                    <div class="newsletter-form">
-                        <script async data-uid="af1be1ec49" src="https://hedoniz.kit.com/af1be1ec49/index.js"></script>
+                    <div class="notify-form">
+                        <h3>📧 Email Notifications</h3>
+                        <form class="email-notify-form">
+                            <input type="email" placeholder="Enter your email" required class="notify-input">
+                            <button type="submit" class="btn btn-primary">Notify Me</button>
+                        </form>
+                        <p class="notify-message"></p>
                     </div>
                     <div class="rss-subscribe">
+                        <h3>📡 RSS Feed</h3>
                         <a href="https://rss.app/feeds/Wf9KAZNuqSI7CnCI.xml" class="rss-button" target="_blank">Subscribe via RSS</a>
                     </div>
                 </div>
@@ -199,5 +205,36 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Email notification form handler
+        const notifyForm = document.querySelector('.email-notify-form');
+        const notifyMessage = document.querySelector('.notify-message');
+
+        notifyForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = notifyForm.querySelector('.notify-input').value;
+            
+            notifyMessage.textContent = 'Subscribing...';
+            notifyMessage.className = 'notify-message';
+            
+            // Store email locally for now
+            try {
+                let subscribers = JSON.parse(localStorage.getItem('hedoniz-subscribers') || '[]');
+                if (!subscribers.includes(email)) {
+                    subscribers.push(email);
+                    localStorage.setItem('hedoniz-subscribers', JSON.stringify(subscribers));
+                    notifyMessage.textContent = '✓ Thanks! You\'ll be notified of new posts.';
+                    notifyMessage.className = 'notify-message success';
+                    notifyForm.reset();
+                } else {
+                    notifyMessage.textContent = '✓ You\'re already subscribed!';
+                    notifyMessage.className = 'notify-message success';
+                }
+            } catch (error) {
+                notifyMessage.textContent = '✗ Something went wrong. Please try again.';
+                notifyMessage.className = 'notify-message error';
+            }
+        });
+    </script>
 </body>
 </html>
