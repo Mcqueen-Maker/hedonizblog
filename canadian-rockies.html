@@ -317,6 +317,77 @@
         </div>
     </footer>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
     <script src="js/main.js"></script>
+    <script>
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.querySelector('.lightbox-caption');
+        const closeBtn = document.querySelector('.lightbox-close');
+        const prevBtn = document.querySelector('.lightbox-prev');
+        const nextBtn = document.querySelector('.lightbox-next');
+        
+        const collageItems = document.querySelectorAll('.collage-item img');
+        let currentIndex = 0;
+        
+        // Open lightbox
+        collageItems.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                openLightbox(img);
+            });
+        });
+        
+        function openLightbox(img) {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxCaption.textContent = img.alt;
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Close lightbox
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Navigate images
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + collageItems.length) % collageItems.length;
+            lightboxImg.src = collageItems[currentIndex].src;
+            lightboxCaption.textContent = collageItems[currentIndex].alt;
+        });
+        
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % collageItems.length;
+            lightboxImg.src = collageItems[currentIndex].src;
+            lightboxCaption.textContent = collageItems[currentIndex].alt;
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevBtn.click();
+                if (e.key === 'ArrowRight') nextBtn.click();
+            }
+        });
+    </script>
 </body>
 </html>
