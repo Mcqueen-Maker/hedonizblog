@@ -477,49 +477,61 @@ h3 { font-size: 1.5rem; }
 .notify-form h3,
 .rss-subscribe h3 {
     font-size: 1.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: #333;
 }
 
-.email-notify-form {
-    display: flex;
-    gap: 0.5rem;
-    flex-direction: row;
-    align-items: stretch;
+/* Kit Form Overrides */
+.notify-form .formkit-form {
+    margin: 0 !important;
 }
 
-.notify-input {
-    flex: 1;
-    padding: 12px 16px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+.notify-form .formkit-fields {
+    display: flex !important;
+    gap: 0.5rem !important;
+    flex-direction: row !important;
+    margin: 0 !important;
 }
 
-.notify-input:focus {
-    outline: none;
-    border-color: #6B8E23;
+.notify-form .formkit-field {
+    flex: 1 !important;
+    margin: 0 !important;
 }
 
-.email-notify-form .btn {
-    flex-shrink: 0;
-    padding: 12px 24px;
-    margin-top: 0;
+.notify-form .formkit-input {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
 }
 
-.notify-message {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #666;
+.notify-form .formkit-input:focus {
+    border-color: #6B8E23 !important;
+    outline: none !important;
 }
 
-.notify-message.success {
-    color: #28a745;
+.notify-form .formkit-submit {
+    flex-shrink: 0 !important;
+    padding: 12px 24px !important;
+    background: #6B8E23 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    transition: all 0.3s ease !important;
 }
 
-.notify-message.error {
-    color: #dc3545;
+.notify-form .formkit-submit:hover {
+    background: #556B1E !important;
+    transform: translateY(-2px) !important;
+}
+
+.notify-form .formkit-alert {
+    margin: 1rem 0 0 0 !important;
+    font-size: 0.9rem !important;
 }
 
 .rss-subscribe {
